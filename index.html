@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+var timeline_config = {
+    width: 900, // OPTIONAL
+    height: 550, // OPTIONAL
+    // maptype: "watercolor", // OPTIONAL
+    // css: 'path_to_file/timeline.css', // OPTIONAL
+    // js: 'path_to_file/timeline.js', // OPTIONAL
+    source: ''
+}
+try {
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+        timeline_config[key] = value;
+    });
+    console.log(timeline_config);
+} catch (e) {
+    console.log("oops");
+}
+</script>
+</head>
+<body>
+	<div id="timeline-embed"></div>
+</body>
+<script type="text/javascript" src="http://veritetimeline.appspot.com/latest/timeline-embed.js"></script>
+</html>
